@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --title-font: "Fraunces", serif;
+  --body-font: "Montserrat", sans-serif;
+  --primary-clr: hsl(228, 12%, 48%);
+  --secondary-clr: hsl(212, 21%, 14%);
+  --accent: hsl(158, 36%, 37%);
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  width: min(90%, 350px);
+  margin: 0 auto;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-family: var(--body-font);
+  font-weight: 500;
+  color: var(--primary-clr);
+}
+
+.product__img {
+  max-width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.product__img--desktop {
+  display: none;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0.5em 0;
+}
+
+.caption {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 0.6em 0;
+  line-height: 1.6;
+}
+
+.title {
+  font-family: var(--title-font);
+  color: var(--secondary-clr);
+  line-height: 1;
+  padding-bottom: 0.6em;
+}
+
+.text {
+  line-height: 1.4;
+  padding-bottom: 0.6em;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+  margin: 0.6em 0;
+}
+
+.current__price {
+  font-family: var(--title-font);
+  font-size: 2em;
+  color: var(--accent);
+}
+
+.former__price {
+  align-self: center;
+}
+
+.btn {
+  background-color: var(--accent);
+  padding: 0.9em 0;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 1em 0;
+  border-radius: 10px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: hsla(158, 36%, 37%, 0.65);
+}
+
+.icon {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+@media (min-width: 800px) {
+  .card {
+    display: flex;
+    width: 480px;
+  }
+
+  .col {
+    flex-basis: 100%;
+  }
+
+  .product__img--mobile {
+    display: none;
+  }
+
+  .product__img--desktop {
+    display: block;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    height: 100%;
+  }
+}
